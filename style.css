@@ -4,7 +4,17 @@ body {
 }
 .container {
     width: 100%
+    display: flex;
+    flex-direction: column;
     
+}
+main {
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+}
+.imgcontainer {
+    background-color: blue; 
 }
 .topnav {
     background-color: #4D4B4A;
@@ -34,12 +44,20 @@ body {
     left: 50%;
     padding: 1px;
     margin: 2px;
-    background-color: black;
+    background-color:white;
+}
+.dropdownitems {
+    display: flex;
     
-
+    align-items: center;
+    width: 20%;
+    height: 500px;
+    background-color: #4D4B4A;
+    position: right;
 }
 
 .unorderedlist {
     list-style: none;
     text-align: right;
 }
+
