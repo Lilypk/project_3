@@ -17,7 +17,7 @@ main {
     background-color: blue; 
 }
 .topnav {
-    background-color: #4D4B4A;
+    background-color: #3D3C3C;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -52,7 +52,7 @@ main {
     align-items: center;
     width: 20%;
     height: 500px;
-    background-color: #4D4B4A;
+    background-color: #3D3C3C;
     position: right;
 }
 .menudrops .dropdownitems {
