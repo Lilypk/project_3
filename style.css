@@ -61,8 +61,11 @@ main {
 .unorderedlist {
     list-style: none;
     text-align: right;
+    
+    
 }
-.li {
-    font-size: 15px;
-    line-height: 40px;
+li {
+    font-size: 18px;
+    line-height: 50px;
+    text-align: left;
 }
