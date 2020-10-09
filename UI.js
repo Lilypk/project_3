@@ -1,6 +1,6 @@
 let menuBar = document.querySelector('.threelines')
-
-menuBar.addEventListener('click', function() {
-    console.log('clicked')
+let parent = document.querySelector('.container')
+menuBar.addEventListener('mouseover', function() {
+    parent.classList.toggle('menudrops')
 })
 
