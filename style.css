@@ -62,4 +62,7 @@ main {
     list-style: none;
     text-align: right;
 }
-
+.li {
+    font-size: 15px;
+    line-height: 40px;
+}
