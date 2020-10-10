@@ -9,12 +9,14 @@ body {
     
 }
 main {
-    /* background-color: red; */
     display: flex;
     justify-content: space-between;
 }
 .imgcontainer {
-    background-color: blue; 
+    width: 60%;
+    height: 400px;
+    margin: 10px 10px 10px 10px;
+    
 }
 .topnav {
     background-color: #3D3C3C;
@@ -69,3 +71,4 @@ li {
     line-height: 50px;
     text-align: left;
 }
+
