@@ -6,6 +6,7 @@ let parent = document.querySelector('.container')
 let list = document.querySelector('.unorderedlist')
 let imageplacement = document.querySelector('.imgcontainer')
 let imageone = ''
+let buttons = document.querySelector('li')
 menuBar.addEventListener('click', function () {
     parent.classList.toggle('menudrops')
 })
@@ -18,20 +19,23 @@ function getRestaurants() {
 
 getRestaurants()
 
-function getFirstImage() {
-    let firstimage = document.querySelector('.first')
-    // let firstURL = topRest + firstimage 
+buttons.addEventListener('click', function() {
+    
+})
+// function getFirstImage() {
+//     let firstimage = document.querySelector('.first')
+//     // let firstURL = topRest + firstimage 
 
-    fetch(topRest, headers)
-    .then(res => {
-        console.log('ugh')
-        res.json()
-    })
-    .then(res => {
-        // imageone = res[15].topRest
-        console.log(res)
-    })
-}
+//     fetch(topRest, headers)
+//     .then(res => {
+//         console.log('ugh')
+//         res.json()
+//     })
+//     .then(res => {
+        
+        
+//     })
+// }
 
-getFirstImage()
+// getFirstImage()
 
