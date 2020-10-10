@@ -18,19 +18,20 @@ function getRestaurants() {
 
 getRestaurants()
 
-// function getFirstImage() {
-//     let firstimage = document.querySelector('.first')
-//     let firstURL = topRest + firstimage 
+function getFirstImage() {
+    let firstimage = document.querySelector('.first')
+    // let firstURL = topRest + firstimage 
 
-//     fetch(firstURL, headers)
-//     .then(res => {
-//         console.log('ugh')
-//         res.json()
-//     })
-//     .then(res => {
-//         imageone = res[0].topRest
+    fetch(topRest, headers)
+    .then(res => {
+        console.log('ugh')
+        res.json()
+    })
+    .then(res => {
+        // imageone = res[15].topRest
+        console.log(res)
+    })
+}
 
-//     })
-// }
+getFirstImage()
 
-// getFirstImage()
