@@ -52,23 +52,25 @@ main {
     display: flex;
     opacity: 0;
     align-items: center;
-    width: 20%;
+    justify-content: center;
+    width: 30%;
     height: 500px;
     background-color: #3D3C3C;
-    position: right;
+   
 }
 .menudrops .dropdownitems {
     opacity: 1;
 }
 .unorderedlist {
     list-style: none;
-    text-align: right;
+    
     
     
 }
 li {
-    font-size: 18px;
+    font-size: 14px;
     line-height: 50px;
     text-align: left;
+    color: white;
 }
 

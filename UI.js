@@ -1,21 +1,26 @@
 const breedURL = 'https://danieledminster.com/dogbreedlist.php'
-const dalURL = 'https://dog.ceo/api/breed/Dalmatian/images/random'
+const affenURL = 'https://dog.ceo/api/breed/affenpinscher/images'
+const afrURL = 'https://dog.ceo/api/breed/African/images'
+const airURL = 'https://dog.ceo/api/breed/Airedale/images'
+const akiURL = 'https://dog.ceo/api/breed/Akita/images'
+const appURL = 'https://dog.ceo/api/breed/Appenzeller/images'
 let menuBar = document.querySelector('.threelines')
 let parent = document.querySelector('.container')
 let list = document.querySelector('.unorderedlist')
 let imageplacement = document.querySelector('.imgcontainer')
 let imageone = ''
 let buttons = document.querySelector('li')
+
 menuBar.addEventListener('click', function () {
     parent.classList.toggle('menudrops')
 })
 
-function getDal(breedURL) {
+function getDogList(breedURL) {
     fetch(breedURL)
         .then(res => res.json())
         .then(res => {
-            console.log(res)
-            for (let i=0; i < 5; i++) {
+            // console.log(res)
+            for (let i = 0; i < 5; i++) {
                 //grab a breed
                 //create list item
                 //innertext 
@@ -24,14 +29,28 @@ function getDal(breedURL) {
                 listItem.className = 'breed'
                 listItem.innerText = res[i]
                 list.appendChild(listItem)
-
             }
-            
-
         })
 }
+getDogList(breedURL)
 
-getDal(breedURL)
+//fetch the images
 
+function getDogImage(affenURL) {
+    fetch(affenURL) 
+    .then(res => res.json())
+    .then(res => {
+        console.log(res)
+        for (let i = 0; i < 3; i++) {
+            //grab an image
+            //create event listener on first list 
+            //add image to the text
+            //place the image in the center
+          let firstDog = document.querySelector('.breed')
+          console.log(firstDog)
+            
+            }
+        })
+    }
 
-
+getDogImage(affenURL)
