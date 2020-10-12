@@ -9,7 +9,7 @@ let parent = document.querySelector('.container')
 let list = document.querySelector('.unorderedlist')
 let imageplacement = document.querySelector('.imgcontainer')
 let imageone = ''
-let buttons = document.querySelector('li')
+let listItem = []
 
 menuBar.addEventListener('click', function () {
     parent.classList.toggle('menudrops')
@@ -19,12 +19,7 @@ function getDogList(breedURL) {
     fetch(breedURL)
         .then(res => res.json())
         .then(res => {
-            // console.log(res)
             for (let i = 0; i < 5; i++) {
-                //grab a breed
-                //create list item
-                //innertext 
-                //append to ul
                 let listItem = document.createElement('li')
                 listItem.className = 'breed'
                 listItem.innerText = res[i]
@@ -33,8 +28,6 @@ function getDogList(breedURL) {
         })
 }
 getDogList(breedURL)
-
-//fetch the images
 
 function getDogImage(affenURL) {
     fetch(affenURL) 
@@ -46,7 +39,9 @@ function getDogImage(affenURL) {
             //create event listener on first list 
             //add image to the text
             //place the image in the center
-          let firstDog = document.querySelector('.breed')
+        
+         
+          let firstDog = itemList.shift()
           console.log(firstDog)
             
             }
@@ -54,3 +49,4 @@ function getDogImage(affenURL) {
     }
 
 getDogImage(affenURL)
+
