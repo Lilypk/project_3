@@ -19,7 +19,7 @@ main {
     
 }
 .topnav {
-    background-color: #3D3C3C;
+    background-color: black;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -28,7 +28,8 @@ main {
     
 }
 .zomato {
-   font-size: 20px;
+   font-size: 25px;
+   font-family: caveat;
    margin: 0 0 10px 0;
    padding: 15px; 
    color: white; 
@@ -37,7 +38,6 @@ main {
     margin: 10px 30px 10px 10px;
     
 }
-
 .dropdown {
     display: flex;
     width: 20px;
@@ -55,8 +55,7 @@ main {
     justify-content: center;
     width: 30%;
     height: 500px;
-    background-color: #3D3C3C;
-   
+    background-color: black;
 }
 .menudrops .dropdownitems {
     opacity: 1;
@@ -64,13 +63,16 @@ main {
 .unorderedlist {
     list-style: none;
     
-    
-    
 }
 li {
-    font-size: 14px;
-    line-height: 50px;
+    font-size: 25px;
+    line-height: 60px;
     text-align: left;
     color: white;
+    cursor: pointer;
+    font-family: caveat;
 }
-
+img {
+    height: 200px;
+    width: 250px;
+}
