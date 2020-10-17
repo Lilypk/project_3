@@ -34,19 +34,17 @@ function getDogImage(affenURL) {
     .then(res => res.json())
     .then(res => {
         console.log(res)
-        for (let i = 0; i < 3; i++) {
-            //grab an image
+            //grab the first three images
             //create event listener on first list 
             //add image to the text
             //place the image in the center
-        
-         
-          let firstDog = itemList.shift()
-          console.log(firstDog)
-            
+            for (let i = 0; i < 3; i++) {
+                
             }
-        })
-    }
+            
+            })
+        
+}
 
 getDogImage(affenURL)
 
