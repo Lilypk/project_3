@@ -1,9 +1,9 @@
 const breedURL = 'https://danieledminster.com/dogbreedlist.php'
 const affenURL = 'https://dog.ceo/api/breed/affenpinscher/images'
-const afrURL = 'https://dog.ceo/api/breed/African/images'
-const airURL = 'https://dog.ceo/api/breed/Airedale/images'
-const akiURL = 'https://dog.ceo/api/breed/Akita/images'
-const appURL = 'https://dog.ceo/api/breed/Appenzeller/images'
+// const afrURL = 'https://dog.ceo/api/breed/African/images'
+// const airURL = 'https://dog.ceo/api/breed/Airedale/images'
+// const akiURL = 'https://dog.ceo/api/breed/Akita/images'
+// const appURL = 'https://dog.ceo/api/breed/Appenzeller/images'
 let menuBar = document.querySelector('.threelines')
 let parent = document.querySelector('.container')
 let list = document.querySelector('.unorderedlist')
@@ -21,8 +21,13 @@ function getDogList(breedURL) {
         .then(res => {
             for (let i = 0; i < 5; i++) {
                 let listItem = document.createElement('li')
+
                 listItem.className = 'breed'
                 listItem.innerText = res[i]
+                listItem.addEventListener('click', function() {
+                    let baseURL = `https://dog.ceo/api/breed/${res[i]}/images`
+                    getDogImage(baseURL)
+                })
                 list.appendChild(listItem)
             }
         })
@@ -38,13 +43,19 @@ function getDogImage(affenURL) {
             //create event listener on first list 
             //add image to the text
             //place the image in the center
+            imageplacement.innerHTML = ''
             for (let i = 0; i < 3; i++) {
                 
+                let imageOne = document.createElement('img')
+               
+                imageOne.setAttribute('src', res.message[i])
+                
+                imageplacement.appendChild(imageOne)
             }
             
             })
         
 }
 
-getDogImage(affenURL)
+// getDogImage(affenURL)
 
